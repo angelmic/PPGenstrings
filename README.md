@@ -7,6 +7,7 @@ It is a genstrings alternative solution.
 	NSLocalizedString(@"xxx4.durationWithZeroMinute", @"剩餘時間: 少於 01 分鐘")
 	NSLocalizedString(@"xxx1H.numberOfStocks", @"商品細節: 庫存數量：%@")
 	NSLocalizedString(@"xxx4L.TimeRatingDueForBuyer", @"訂單列表: 請於 %@ 前給評賣家")
+	NSLocalizedString(@"Alert.Confirm", @"確定")
 	
 ####Usage:
 	./PPGenstrings yourSourceFolder ~/Desktop/ok.strings
@@ -23,4 +24,7 @@ It is a genstrings alternative solution.
 	
 	/* 訂單列表: 請於 %@ 前給評賣家 */
 	"xxx4L.TimeRatingDueForBuyer" = "請於 %@ 前給評賣家";
+	
+	/* 確定 */
+	"Alert.Confirm" = "確定";
 
