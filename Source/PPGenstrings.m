@@ -66,7 +66,7 @@
         
         //NSString *pattern = @"NSLocalizedString\\s*\\(\\s*@\"\\S*\"\\,\\s*\\@\"\\S*\\s*\\S*\"\\)";
         
-        NSString *pattern = @"NSLocalizedString\\s*\\(\\s*\\@\".*\"\\,\\s*\\@\".*\"\\)";
+        NSString *pattern = @"LOCALIZATION\\s*\\(\\s*\\@\".*\"\\,\\s*\\@\".*\"\\)";
         
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
         NSArray *matches = [regex matchesInString:source options:0 range:searchedRange];
