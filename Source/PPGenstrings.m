@@ -66,7 +66,7 @@
         
         //NSString *pattern = @"NSLocalizedString\\s*\\(\\s*@\"\\S*\"\\,\\s*\\@\"\\S*\\s*\\S*\"\\)";
         
-        NSString *pattern = @"NSLocalizedString\\s*\\(\\s*\\@\".*\"\\,\\s*\\@\".*\"\\)";
+        NSString *pattern = @"NSLocalizedString\\s*\\(\\s*\".*\"\\,\\s*comment\\s*:\\s*\".*\"\\)";
         
         NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:nil];
         NSArray *matches = [regex matchesInString:source options:0 range:searchedRange];
@@ -101,7 +101,7 @@
         NSString *fullPath = [directory stringByAppendingPathComponent:path];
         NSArray *pairs = nil;
         
-        if ([extension isEqualToString:@"m"] || [extension isEqualToString:@"h"] || [extension isEqualToString:@"mm"]) {
+        if ([extension isEqualToString:@"m"] || [extension isEqualToString:@"h"] || [extension isEqualToString:@"mm"] || [extension isEqualToString:@"swift"]) {
             // good old fashioned NSLocalizedString
             NSLog(@"Processing: %@", [fullPath componentsSeparatedByString:@"/"].lastObject);
             pairs = [self localizedStringsForSourceFile:fullPath];
